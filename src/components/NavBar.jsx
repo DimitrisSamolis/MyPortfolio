@@ -27,7 +27,8 @@ const NavBar = () => {
     <div className="flex justify-between items-center w-full h-16 px-4 fixed text-gray-300 bg-blue-950 ">
       <div>
         <h1 className="sm:text-2xl md:text-4xl font-mono ml-2">
-          My Portfolio <span className="sm:text-3xl md:text-4xl">👨‍💻</span>
+          
+          My Portfolio <span className="md:text-3xl text-2xl">👨‍💻</span>
         </h1>
       </div>
 
