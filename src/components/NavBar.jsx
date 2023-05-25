@@ -30,10 +30,15 @@ const NavBar = () => {
     }
   ];
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
+    
     <div className="flex justify-between items-center w-full h-16 px-4 fixed text-gray-300 bg-blue-950 ">
       <div>
-        <h1 className="text-2xl md:text-4xl  font-mono  ml-2">
+        <h1 className="text-2xl md:text-4xl  font-mono  ml-2 cursor-pointer" onClick={refreshPage}>
           DimSa <span className="md:text-3xl text-1xl">👨‍💻</span>
         </h1>
       </div>
