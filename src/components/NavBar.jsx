@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import {Link} from 'react-scroll';
 import { FaBars, FaTimes } from "react-icons/fa";
+import wallpaper from '../assets/myportwall.jpg'
+
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -20,15 +23,18 @@ const NavBar = () => {
     {
       id: 4,
       link: 'Experience'
+    },
+    {
+      id: 5,
+      link: 'Contact'
     }
   ];
 
   return (
     <div className="flex justify-between items-center w-full h-16 px-4 fixed text-gray-300 bg-blue-950 ">
       <div>
-        <h1 className="sm:text-2xl md:text-4xl font-mono ml-2">
-          
-          My Portfolio <span className="md:text-3xl text-2xl">👨‍💻</span>
+        <h1 className="text-2xl md:text-4xl  font-mono  ml-2">
+          DimSa <span className="md:text-3xl text-1xl">👨‍💻</span>
         </h1>
       </div>
 
@@ -38,7 +44,7 @@ const NavBar = () => {
             key={id}
             className="px-4 cursor-pointer capitalize font-medium text-gray-300 hover:scale-105 duration-200"
           >
-            {link}
+            <Link to={link} smooth duration={800}> {link} </Link>
           </li>
         ))}
       </ul>
@@ -51,13 +57,20 @@ const NavBar = () => {
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-blue-700 to-blue-900 text-white">
+        
+        <ul className="flex flex-col opacity-95 justify-center items-center absolute top-0 left-0 w-full h-screen text-white"
+            style={{
+          backgroundImage: `url(${wallpaper})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center'
+          }}>
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-3xl hover:scale-105 duration-200"
+              className="px-4 cursor-pointer capitalize py-6 text-3xl hover:scale-105 duration-200  hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 rounded-xl "
             >
-              {link}
+            <Link onClick={() => setNav(!nav)} to={link} smooth duration={800}> {link} </Link>
             </li>
           ))}
         </ul>

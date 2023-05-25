@@ -4,6 +4,8 @@ import Socials from "./components/Socials";
 import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Wallpaper from './assets/myportwall.jpg'
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 
 
 function App() {
@@ -12,13 +14,14 @@ function App() {
       backgroundImage: `url(${Wallpaper})`,
       backgroundSize: 'cover',
       backgroundRepeat: 'repeat',
-      backgroundPosition: 'center',
+      backgroundPosition: 'center'
     }}>
       <NavBar />
       <Home />
       <About />
       <Portfolio />
-
+      <Experience />
+      <Contact />
 
       <Socials />
     </div>

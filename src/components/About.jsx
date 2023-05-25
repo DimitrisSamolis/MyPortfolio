@@ -2,26 +2,28 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div name="about" className='w-full h-screen  text-white py-20'>
+    <div name="About" className='w-full text-white py-20'>
         <div className='max-w-screen-lg p-6 mx-auto flex flex-col justify-center w-full h-full '>
             <div className='rounded-2xl p-6 bg-gradient-to-b from-blue-800 to-transparent '> 
-                <div className=' w-auto h-auto flex items-center justify-center'>
+                <div className=' w-auto h-auto flex items-center justify-center pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 border-orange-400'> About </p>
                 </div>
-                <p className='text-xl'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur, voluptatibus repellat excepturi nisi nostrum 
-                    exercitationem placeat adipisci obcaecati debitis, ea deleniti 
-                    non hic quod ad provident soluta omnis quos minima!
+                <p className='text-xl font-semibold'>
+                    Throughout my journey as a developer, I have had the opportunity to work on numerous projects 
+                    that have allowed me to apply and refine my skills. From building responsive websites to crafting interactive user interfaces, 
+                    I have gained valuable hands-on experience in various aspects of software development.
+                    I am particularly skilled in HTML, CSS, and JavaScript, and I am always eager to learn new technologies and frameworks
+                    to enhance my abilities. I have a strong attention to detail and a keen eye for design, which enables me to create visually 
+                    appealing and user-friendly interfaces.
                 </p>
                 <br />
-                <p className='text-xl'>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Vitae, eaque perferendis distinctio, in nemo perspiciatis modi 
-                    aspernatur impedit voluptatibus eum autem ab accusantium provident
-                    omnis eos laboriosam quis veritatis pariatur. Eius repellat incidunt tenetur 
-                    quae numquam temporibus, maiores a. Alias aspernatur tempora porro corrupti blanditiis hic
-                    quasi quibusdam voluptas assumenda.
+                <p className='text-xl font-semibold'>
+                    Collaboration is something I greatly value, and I thrive in team environments where ideas can be shared and synergies can be created.
+                    I believe that the best results are achieved through effective communication, cooperation, and a passion for delivering high-quality work.
+                    I am currently seeking opportunities for cooperation and professional growth. If you have a project or an opportunity where my skills 
+                    and enthusiasm align, I would love to hear from you. Let's work together to bring innovative ideas to life!
+                    Thank you for taking the time to visit my portfolio. Feel free to explore my projects and get in touch with me. 
+                    I look forward to connecting with you and discussing potential collaborations.
                 </p>
             </div>
         </div>
