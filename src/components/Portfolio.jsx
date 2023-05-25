@@ -11,27 +11,34 @@ const Portfolio = () => {
   const portfolios = [
     {
       id:1,
-      src: img1
+      src: img1,
+      href: 'https://github.com/Dimitris155/MyPortfolio'
     },
     {
       id:2,
-      src: img2
+      src: img2,
+      href: 'https://github.com/Dimitris155/Rental-Website'
+
     },
     {
       id:3,
-      src: img3
+      src: img3,
+      href: 'https://github.com/Dimitris155/VideoGames-Angular'
     },
     {
       id:4,
-      src: img4
+      src: img4,
+      href: 'https://github.com/Dimitris155/Information-System-for-University-Campus'
     },
     {
       id:5,
-      src: img5
+      src: img5,
+      href: 'https://github.com/Dimitris155/Website-Vue'
     },
     {
       id:6,
-      src: img6
+      src: img6,
+      href: 'https://github.com/Dimitris155/Client-Server'
     }
 
   ]
@@ -44,13 +51,14 @@ const Portfolio = () => {
             <p className="text-4xl font-bold inline border-b-4 border-orange-400">Portfolio</p>
           </div>
           <p className="py-6 w-auto h-auto flex items-center justify-center">Check out some of my projects here</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 px-12 sm-px-0">
-            {portfolios.map(({ id, src }) => (
-              <div key={id} className="shadow-md shadow-orange-500 rounded-lg">
-                <img src={src} alt="" className="rounded-md duration-200 hover:scale-90" />
-                <div className="flex items-center justify-center">
-                  <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Demo</button>
-                  <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">Code</button>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 px-12 sm-px-0 ">
+              {portfolios.map(({ id, src, href }) => (
+              <div key={id} className="shadow-md shadow-orange-600 rounded-lg bg-gradient-to-b from-gray-500 to-transparent">
+                <img src={src} alt="" className="rounded-md duration-200 hover:animate-pulse" />
+                <div className="flex items-center justify-center  ">
+                  <button className=" px-6 py-3 m-4 duration-200 hover:scale-105 hover:text-orange-600 hover:font-bold ">
+                    <a href={href} target="_blank" rel="noopener noreferrer">Code</a>
+                  </button>
                 </div>
               </div>
             ))}

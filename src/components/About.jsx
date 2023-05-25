@@ -8,7 +8,7 @@ const About = () => {
                 <div className=' w-auto h-auto flex items-center justify-center pb-8'>
                     <p className='text-4xl font-bold inline border-b-4 border-orange-400'> About </p>
                 </div>
-                <p className='text-xl font-semibold'>
+                <p className='text-xl font-medium'>
                     Throughout my journey as a developer, I have had the opportunity to work on numerous projects 
                     that have allowed me to apply and refine my skills. From building responsive websites to crafting interactive user interfaces, 
                     I have gained valuable hands-on experience in various aspects of software development.
@@ -17,7 +17,7 @@ const About = () => {
                     appealing and user-friendly interfaces.
                 </p>
                 <br />
-                <p className='text-xl font-semibold'>
+                <p className='text-xl font-medium'>
                     Collaboration is something I greatly value, and I thrive in team environments where ideas can be shared and synergies can be created.
                     I believe that the best results are achieved through effective communication, cooperation, and a passion for delivering high-quality work.
                     I am currently seeking opportunities for cooperation and professional growth. If you have a project or an opportunity where my skills 
