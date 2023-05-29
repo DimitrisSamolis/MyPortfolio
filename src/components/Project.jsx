@@ -12,33 +12,44 @@ const Projects = () => {
     {
       id:1,
       src: img1,
-      href: 'https://github.com/Dimitris155/MyPortfolio'
+      href: 'https://github.com/Dimitris155/MyPortfolio',
+      langs: "> ReactJS, TailwindCss",
+      title: "Portfolio"
     },
     {
       id:2,
       src: img2,
-      href: 'https://github.com/Dimitris155/Rental-Website'
-
+      href: 'https://github.com/Dimitris155/Rental-Website',
+      langs: "> HTML, CSS, JavaScript, PHP",
+      title: "CarRental App"
     },
     {
       id:3,
       src: img3,
-      href: 'https://github.com/Dimitris155/VideoGames-Angular'
+      href: 'https://github.com/Dimitris155/VideoGames-Angular',
+      langs: "> AngularJS, TypeScript",
+      title: "VideoGAmes App"
     },
     {
       id:4,
       src: img4,
-      href: 'https://github.com/Dimitris155/Information-System-for-University-Campus'
+      href: 'https://github.com/Dimitris155/Information-System-for-University-Campus',
+      langs: "> JAVA, UMLlet, SQL",
+      title: "University Campus DataBase"
     },
     {
       id:5,
       src: img5,
-      href: 'https://github.com/Dimitris155/Website-Vue'
+      href: 'https://github.com/Dimitris155/Website-Vue',
+      langs: "> VueJS",
+      title: "Information System App"
     },
     {
       id:6,
       src: img6,
-      href: 'https://github.com/Dimitris155/Client-Server'
+      href: 'https://github.com/Dimitris155/Client-Server',
+      langs: "> Python, XML",
+      title: "Communication Between Server-Client"
     }
 
   ]
@@ -52,11 +63,15 @@ const Projects = () => {
           </div>
           <p className="py-6 w-auto h-auto flex items-center justify-center">Check out some of my projects here</p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 px-12 sm-px-0 ">
-            {projects.map(({ id, src, href }) => (
+            {projects.map(({ id, langs, title, src, href }) => (
             <div key={id} className="shadow-lg shadow-orange-600 hover:scale-105 duration-500 rounded-2xl bg-gradient-to-t from-gray-400 to-transparent">
               <img src={src} alt="" className="rounded-t-2xl hover:animate-pulse" />
-              <div className="flex items-center justify-center  ">
-                <button className="py-3 duration-200 hover:scale-105 hover:text-orange-600 hover:font-bold ">
+              <div className='p-2 text-xs sm:text-sm bg-gray-600 border border-gray-500 text-black'>
+                  <p className='font-normal'>{langs} </p>
+                  <p className='flex items-center justify-center font-bold'>{title}</p>
+                </div>
+              <div className="flex items-center justify-center">
+                <button className="w-1/2 py-3 duration-200 hover:scale-105 hover:text-orange-600 hover:font-bold ">
                   <a href={href} target="_blank" rel="noopener noreferrer">Show code</a>
                 </button>
               </div>

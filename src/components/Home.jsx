@@ -35,7 +35,7 @@ const Home = () => {
                 where I am honing my skills and expanding my knowledge in the field of web development.
               </p>
               <div>
-                <Link to='Project' smooth duration={500} className='group  text-white w-fit px-4 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-yellow-400 to to-orange-600 transition-all hover:text-lg cursor-pointer'>
+                <Link to='Projects' smooth duration={500} className='group  text-white w-fit px-4 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-yellow-400 to to-orange-600 transition-all hover:text-lg cursor-pointer'>
                   My Projects  
                   <span className='p-2 group-hover:rotate-90 duration-300 '> <BsArrowRightCircle size={20}/> </span>
                 </Link>
