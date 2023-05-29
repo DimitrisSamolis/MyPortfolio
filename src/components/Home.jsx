@@ -25,8 +25,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div name="Home" className=" h-screen w-full py-10 mb-96 sm:mb-80">
-      <div className="max-w-screen-lg  mx-auto flex items-center justify-center mt-20 p-4 md:flex-row ">
+    <div name="Home" className=" h-screen w-full py-20 mb-96 sm:mb-0">
+      <div className="max-w-screen-lg  mx-auto flex items-center justify-center mt-20 sm:mt-0 p-4 md:flex-row ">
         <div className="rounded-2xl p-6 w-auto h-auto flex items-center justify-center bg-gradient-to-b from-blue-800 to-transparent">
             <div className="flex flex-col justify-center h-full px-2 sm:px-6 ">
               <h2 id='text' className="text-4xl font-semi pb-8 text-white"> Welcome to my Portfolio!</h2>

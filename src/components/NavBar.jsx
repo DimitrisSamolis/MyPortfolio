@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from "react-icons/fa";
+import account from '../assets/acc.png'
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
@@ -16,7 +17,7 @@ const NavBar = () => {
     },
     {
       id: 3,
-      link: 'Project'
+      link: 'Projects'
     },
     {
       id: 4,
@@ -34,11 +35,13 @@ const NavBar = () => {
 
   return (
     <div className="flex justify-between items-center w-full h-16 px-4 fixed text-gray-300 bg-blue-950 z-50">
-      <div>
-        <h1 className="text-2xl md:text-4xl font-mono ml-2 cursor-pointer" onClick={refreshPage}>
-          DimSa <span className="md:text-3xl text-2xl"> 👨‍💻 </span>
+      <div className="flex items-center cursor-pointer " onClick={refreshPage}>
+        <h1 className="text-2xl md:text-4xl font-mono ml-2 " >
+          D-Sam
         </h1>
+        <img src={account} alt="my account" className="h-8 md:h-10 ml-2 " />
       </div>
+
 
       <ul className="hidden md:flex">
         {links.map(({ id, link }) => (

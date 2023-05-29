@@ -5,41 +5,21 @@ import { BsFillPersonFill } from 'react-icons/bs'
 
 const Socials = () => {
     const links = [
-        {
-            id:1,
-            child: (
-                <>
-                    LinkedIn <FaLinkedin size={30}/> 
-                </>
-            ),
+        {   id:1,
+            child: (<> LinkedIn <FaLinkedin size={30}/> </>),
             href: 'https://www.linkedin.com/in/dimitris-samolis-66a73b208/' ,
             style: 'rounded-tr-md'
         },
-        {
-            id:2,
-            child: (
-                <>
-                    GitHub <FaGithub size={30}/> 
-                </>
-            ),
-            href: 'https://github.com/Dimitris155' ,
+        {   id:2,
+            child: (<> Github <FaGithub size={30}/> </>),
+            href: 'https://github.com/Dimitris155' 
         },
-        {
-            id:3,
-            child: (
-                <>
-                    Mail <HiOutlineMail size={30}/> 
-                </>
-            ),
+        {   id:3,
+            child: (<> Mail <HiOutlineMail size={30}/> </>),
             href: 'mailto:dimitrissamolis2001@gmai.com'
         },
-        {
-            id:4,
-            child: (
-                <>
-                    Resume <BsFillPersonFill size={30}/> 
-                </>
-            ),
+        {   id:4,
+            child: (<> Resume<BsFillPersonFill size={30}/> </>),
             href: '/CV-DS.pdf' ,
             style: 'rounded-br-md',
             download: true

@@ -7,6 +7,7 @@ import Wallpaper from './assets/myportwall.jpg'
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Loader from "./components/Loader";
+import Footer from "./components/Footer"
 import React, { useState, useEffect } from "react";
 
 
@@ -30,16 +31,14 @@ function App() {
       {isLoading ? <Loader /> : null}
       {!isLoading && (
         <div>
-          
           <NavBar />
           <Home />
           <About />
           <Project />
           <Experience />
           <Contact />
-    
           <Socials />
-          
+          <Footer />
         </div>
       )}
 

@@ -8,6 +8,8 @@ import github from '../assets/github.png'
 import tailwind from '../assets/tailwind.png'
 import angular from '../assets/angular.png'
 import uml from '../assets/uml.png'
+import java from '../assets/java.png'
+import php from '../assets/php.png'
 
 
 const Experience = () => {
@@ -19,9 +21,11 @@ const Experience = () => {
         { id:4,src: reactimg, title:'React', style: 'shadow-sky-400' },
         { id:5,src: vue, title:'Vue', style: 'shadow-green-500' },
         { id:6,src: angular, title:'Angular', style: 'shadow-red-700' },
-        { id:7,src: uml, title:'UML', style: 'shadow-purple-500' },
+        { id:7,src: uml, title:'UML', style: 'shadow-pink-500' },
         { id:8,src: tailwind, title:'Tailwind', style: 'shadow-sky-300' },
-        { id:9,src: github, title:'Github', style: 'shadow-gray-400' }
+        { id:9,src: github, title:'Github', style: 'shadow-gray-400' },
+        { id:10, src: java , title: 'JAVA', style: 'shadow-red-700'},
+        { id:11, src: php, title: 'PHP', style: 'shadow-purple-600'}
     ]
 
   return (
@@ -34,7 +38,7 @@ const Experience = () => {
                 <p className='py-6 w-auto h-auto flex items-center justify-center'> These are the technologies I have worked with</p> 
                 <div className=' grid grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-8 sm:px-0'>
                     {techs.map(({id,src,title,style}) => (
-                        <div key={id} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-3xl bg-gradient-to-b from-gray-400 to-transparent ${style}`}>
+                        <div key={id} className={`shadow-lg hover:scale-105 duration-500 py-2 rounded-3xl bg-gradient-to-b from-slate-300 to-slate-600 ${style}`}>
                             <img src={src} alt="" className='w-20 mx-auto' />
                             <p className='mt-4'>{title}</p>
                         </div>
