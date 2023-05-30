@@ -30,7 +30,7 @@ const Home = () => {
         <div className="rounded-2xl p-6 w-auto h-auto flex items-center justify-center bg-gradient-to-b from-blue-800 to-transparent">
             <div className="flex flex-col justify-center h-full px-2 sm:px-6 ">
               <h2 id='text' className="text-4xl font-semi pb-8 text-white"> Welcome to my Portfolio!</h2>
-              <p className="text-white px-2 p-4 max-w-md">
+              <p className="text-white py-4 px-2 mx-2 max-w-md hover:scale-105 duration-200 hover:bg-black hover:bg-opacity-20 rounded-xl">
                 Hello! I'm Dimitris, a passionate and dedicated front-end developer intern. Currently, I am studying at the University of Piraeus,
                 where I am honing my skills and expanding my knowledge in the field of web development.
               </p>
@@ -42,7 +42,7 @@ const Home = () => {
               </div>
             </div>
           <div className="my-4 ">
-            <img src={MyImage} alt="my profile" className="hover:scale-110 duration-200 rounded-3xl max-w-md h-auto md:w-32 w-24 text-right justify-between" />
+            <img src={MyImage} alt="my profile" className="hover:scale-110 duration-200  hover:shadow-2xl hover:shadow-black  rounded-3xl max-w-md h-auto md:w-32 w-24 text-right justify-between" />
           </div>
         </div>
       </div>

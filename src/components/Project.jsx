@@ -28,7 +28,7 @@ const Projects = () => {
       src: img3,
       href: 'https://github.com/Dimitris155/VideoGames-Angular',
       langs: "> AngularJS, TypeScript",
-      title: "VideoGAmes App"
+      title: "VideoGames App"
     },
     {
       id:4,
@@ -66,12 +66,12 @@ const Projects = () => {
             {projects.map(({ id, langs, title, src, href }) => (
             <div key={id} className="shadow-lg shadow-orange-600 hover:scale-105 duration-500 rounded-2xl bg-gradient-to-t from-gray-400 to-transparent">
               <img src={src} alt="" className="rounded-t-2xl hover:animate-pulse" />
-              <div className='p-2 text-xs sm:text-sm bg-gray-600 border border-gray-500 text-black'>
-                  <p className='font-normal'>{langs} </p>
-                  <p className='flex items-center justify-center font-bold'>{title}</p>
-                </div>
+              <div className='p-2 h-24 text-xs sm:text-sm bg-gray-600 border border-gray-500 text-black'>
+                <p className='font-normal'>{langs} </p>
+                <p className='flex items-center justify-center font-bold pt-2'>{title}</p>
+              </div>
               <div className="flex items-center justify-center">
-                <button className="w-1/2 py-3 duration-200 hover:scale-105 hover:text-orange-600 hover:font-bold ">
+                <button className="py-3 duration-200 hover:scale-105 hover:text-orange-600 hover:font-bold ">
                   <a href={href} target="_blank" rel="noopener noreferrer">Show code</a>
                 </button>
               </div>
