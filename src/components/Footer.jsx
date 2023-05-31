@@ -29,14 +29,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-950 pb-1">
-      <div className="mx-auto text-center text-white">
+    <footer className="bg-blue-900 pb-1">
+      <div className="mx-auto text-center ">
         <div className="flex justify-center items-center"> Find me on: 
           {links.map(({ id, child, href, download }) => (
             <div key={id} className="mx-2"> 
               <a
                 href={href}
-                className="text-white px-2"
+                className=" px-2"
                 download={download}
                 target="_blank"
                 rel="noreferrer"

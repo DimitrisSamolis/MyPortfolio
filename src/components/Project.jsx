@@ -55,7 +55,7 @@ const Projects = () => {
   ]
 
   return (
-    <div name="Projects" className="w-full text-white md:h-screen">
+    <div name="Projects" className="w-full md:h-screen">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ">
         <div className="rounded-2xl p-6 bg-gradient-to-b from-blue-800 to-transparent">
           <div className="w-auto h-auto flex items-center justify-center">
@@ -66,7 +66,7 @@ const Projects = () => {
             {projects.map(({ id, langs, title, src, href }) => (
             <div key={id} className="shadow-lg shadow-orange-600 hover:scale-105 duration-500 rounded-2xl bg-gradient-to-t from-gray-400 to-transparent">
               <img src={src} alt="" className="rounded-t-2xl hover:animate-pulse" />
-              <div className='p-2 h-24 text-xs sm:text-sm bg-gray-600 border border-gray-500 text-black'>
+              <div className='p-2 h-24 text-xs sm:text-sm bg-gray-600 border border-gray-500 '>
                 <p className='font-normal'>{langs} </p>
                 <p className='flex items-center justify-center font-bold pt-2'>{title}</p>
               </div>

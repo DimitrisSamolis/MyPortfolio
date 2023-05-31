@@ -26,16 +26,16 @@ const Home = () => {
 
   return (
     <div name="Home" className=" h-screen w-full py-20 mb-96 sm:mb-0">
-      <div className="max-w-screen-lg  mx-auto flex items-center justify-center mt-20 sm:mt-0 p-4 md:flex-row ">
+      <div className="max-w-screen-lg  mx-auto flex items-center justify-center mt-20 sm:mt-10 p-4 md:flex-row ">
         <div className="rounded-2xl p-6 w-auto h-auto flex items-center justify-center bg-gradient-to-b from-blue-800 to-transparent">
-            <div className="flex flex-col justify-center h-full px-2 sm:px-6 ">
-              <h2 id='text' className="text-4xl font-semi pb-8 text-white"> Welcome to my Portfolio!</h2>
-              <p className="text-white py-4 px-2 mx-2 max-w-md hover:scale-105 duration-200 hover:bg-black hover:bg-opacity-20 rounded-xl">
+            <div className="flex flex-col justify-center h-full px-2 sm:px-6 font-semi">
+              <h2 id='text' className="text-4xl pb-8"> Welcome to my Portfolio!</h2>
+              <p className={`py-4 px-2 mx-2 max-w-md hover:scale-95 duration-200 hover:bg-opacity-40 rounded-xl hover:bg-slate-400`} >
                 Hello! I'm Dimitris, a passionate and dedicated front-end developer intern. Currently, I am studying at the University of Piraeus,
                 where I am honing my skills and expanding my knowledge in the field of web development.
               </p>
               <div>
-                <Link to='Projects' smooth duration={500} className='group  text-white w-fit px-4 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-yellow-400 to to-orange-600 transition-all hover:text-lg cursor-pointer'>
+                <Link to='Projects' smooth duration={500} className='group w-fit px-4 py-3 my-3 flex items-center rounded-md bg-gradient-to-r from-yellow-400 to to-orange-600 transition-all hover:text-lg cursor-pointer'>
                   My Projects  
                   <span className='p-2 group-hover:rotate-90 duration-300 '> <BsArrowRightCircle size={20}/> </span>
                 </Link>
@@ -46,7 +46,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <span className="p-2 rounded-full text-white flex justify-center items-center animate-bounce">
+      <span className="p-2 rounded-full  flex justify-center items-center animate-bounce">
         <MdOutlineSwipeVertical size={30} /> 
       </span>
     </div>  
