@@ -1,15 +1,15 @@
 import React from 'react'
-import html from '../assets/html.png';
-import css from '../assets/css.png'
-import js from '../assets/js.png'
-import reactimg from '../assets/reactimg.png'
-import vue from '../assets/vue.png'
-import github from '../assets/github.png'
-import tailwind from '../assets/tailwind.png'
-import angular from '../assets/angular.png'
-import uml from '../assets/uml.png'
-import java from '../assets/java.png'
-import php from '../assets/php.png'
+import html from '../assets/experience/html.png';
+import css from '../assets/experience/css.png'
+import js from '../assets/experience/js.png'
+import reactimg from '../assets/experience/reactimg.png'
+import vue from '../assets/experience/vue.png'
+import github from '../assets/experience/github.png'
+import tailwind from '../assets/experience/tailwind.png'
+import angular from '../assets/experience/angular.png'
+import uml from '../assets/experience/uml.png'
+import java from '../assets/experience/java.png'
+import php from '../assets/experience/php.png'
 
 
 const Experience = () => {
@@ -36,7 +36,7 @@ const Experience = () => {
                     <p className='text-4xl font-bold border-b-4 border-orange-400 inline'> Experience </p>
                 </div>
                 <p className='py-6 w-auto h-auto flex items-center justify-center'> These are the technologies I have worked with</p> 
-                <div className=' grid grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0'>
+                <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-12'>
                     {techs.map(({id,src,title,style}) => (
                         <div key={id} className={`shadow-lg hover:scale-105 duration-500 py-2 rounded-3xl bg-gradient-to-b from-slate-300 to-slate-600 ${style}`}>
                             <img src={src} alt="" className='w-20 mx-auto' />
