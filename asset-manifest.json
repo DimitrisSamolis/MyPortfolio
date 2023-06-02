@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/dimitris155.github.io/static/css/main.f364b704.css",
+    "main.js": "/dimitris155.github.io/static/js/main.de57b44d.js",
+    "static/media/myportwall.jpg": "/dimitris155.github.io/static/media/myportwall.e4143a8e67859fbe8f76.jpg",
+    "static/media/myportwall1.jpg": "/dimitris155.github.io/static/media/myportwall1.8240226c5b5cdd4d91ba.jpg",
+    "static/media/img5.png": "/dimitris155.github.io/static/media/img5.70a9775424ea7b5f663f.png",
+    "static/media/img_crp.jpg": "/dimitris155.github.io/static/media/img_crp.72b9c2fbdb1623e068f1.jpg",
+    "static/media/img6.jpg": "/dimitris155.github.io/static/media/img6.e0a541e0c60938361d2a.jpg",
+    "static/media/img4.jpg": "/dimitris155.github.io/static/media/img4.3551ba027e5b6f6e3ca8.jpg",
+    "static/media/img1.jpg": "/dimitris155.github.io/static/media/img1.459af04ccbec77fbac15.jpg",
+    "static/media/img2.jpg": "/dimitris155.github.io/static/media/img2.cfe043eac55ca5672d25.jpg",
+    "static/media/img3.png": "/dimitris155.github.io/static/media/img3.7ff4d3c6b18d511b66aa.png",
+    "static/media/reactimg.png": "/dimitris155.github.io/static/media/reactimg.ccbd9d34a638b8556e62.png",
+    "static/media/java.png": "/dimitris155.github.io/static/media/java.d6943be061acc13cb16a.png",
+    "static/media/angular.png": "/dimitris155.github.io/static/media/angular.c0091e59ee91cb74d75c.png",
+    "index.html": "/dimitris155.github.io/index.html",
+    "main.f364b704.css.map": "/dimitris155.github.io/static/css/main.f364b704.css.map",
+    "main.de57b44d.js.map": "/dimitris155.github.io/static/js/main.de57b44d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f364b704.css",
+    "static/js/main.de57b44d.js"
+  ]
+}
