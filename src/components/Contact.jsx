@@ -17,7 +17,7 @@ const Contact = () => {
                         </input>
                         <input type='text' name='email' placeholder='Enter your email...' required
                         className='p-2 my-4 bg-transparent rounded-md border-2 focus:outline-none'
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
                         </input>
                         <textarea name='message' rows='10' placeholder='Enter your message... ' required
                         className='p-4 bg-transparent rounded-md border-2  focus:outline-none' ></textarea>
