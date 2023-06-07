@@ -5,6 +5,7 @@ import img3 from '../assets/projects/img3.png'
 import img4 from '../assets/projects/img4.jpg'
 import img5 from '../assets/projects/img5.png'
 import img6 from '../assets/projects/img6.jpg'
+import { FaGithub } from 'react-icons/fa'
 
 const Projects = () => {
 
@@ -57,27 +58,37 @@ const Projects = () => {
   return (
     <div name="Projects" className="w-full lg:px-10 xl:px-40">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ">
-        <div className="rounded-2xl p-6 bg-gradient-to-b from-blue-800 to-transparent">
+        <div className="rounded-2xl p-6 bg-lightblue">
           <div className="w-auto h-auto flex items-center justify-center">
-            <p className="text-4xl font-bold inline border-b-4 border-orange-400">Projects</p>
+            <h2 className="text-4xl font-bold inline border-b-4 border-orange">Projects</h2>
           </div>
           <p className="py-6 w-auto h-auto flex items-center justify-center">Check out some of my projects here</p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10">
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 my-6">
             {projects.map(({ id, langs, title, src, href }) => (
-            <div key={id} className="shadow-lg shadow-orange-600 hover:scale-105 duration-500 rounded-2xl bg-gradient-to-t from-gray-400 to-transparent">
-              <img src={src} alt="" className="rounded-t-2xl hover:animate-pulse" />
-              <div className='p-2 h-24 text-xs sm:text-sm bg-gray-600 border border-gray-500 '>
-                <p className='font-mono'>{langs} </p>
-                <p className='flex items-center justify-center font-bold text-center py-2'>{title}</p>
-              </div>
-              <div className="flex items-center justify-center">
-                <button className="py-3 duration-200 hover:scale-105 hover:text-orange-600 hover:font-bold ">
-                  <a href={href} target="_blank" rel="noopener noreferrer">Show code</a>
-                </button>
-              </div>
-            </div>
+              <a href={href} target="_blank" rel="noopener noreferrer" key={id}>
+                <div className="shadow-lg shadow-cyan hover:scale-105 duration-500 rounded-2xl relative">
+                  <img src={src} alt="" className="rounded-t-2xl " />
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-90 transition-opacity">
+                    <div className="bg-white border hover:animate-pulse border-orange w-full h-full flex flex-col items-center justify-center rounded-2xl">
+                      <button className="sm:text-sm font-semibold text-lg py-4 text-center text-black">
+                        <div className="flex items-center justify-center">
+                          <FaGithub size={60} />
+                        </div>
+                        Show code
+                      </button>
+                    </div>
+                  </div>
+                  <div className="bg-orange rounded-b-2xl h-24">
+                    <h3 className="font-mono pb-0 p-1">{langs}</h3>
+                    <h3 className="flex items-center justify-center font-bold text-center py-2">{title}</h3>
+                  </div>
+                </div>
+              </a>
             ))}
           </div>
+
+
         </div>
       </div>
   </div>

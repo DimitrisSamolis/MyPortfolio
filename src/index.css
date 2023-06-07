@@ -10,3 +10,33 @@
   }
 }
 
+@layer utilities {
+  .shadow-orange {
+    box-shadow: 0px 10px 20px rgb(255, 128, 0);
+  }
+  .shadow-blue {
+    box-shadow: 0px 10px 20px rgb(0, 42, 255);
+  }
+  .shadow-yellow {
+    box-shadow: 0px 10px 20px rgb(255, 255, 0);
+  }
+  .shadow-sky {
+    box-shadow: 0px 10px 20px rgb(0, 242, 255);
+  }
+  .shadow-green {
+    box-shadow: 0px 10px 20px rgb(0, 255, 55);
+  }
+  .shadow-red {
+    box-shadow: 0px 10px 20px rgb(255, 0, 0);
+  }
+  .shadow-pink {
+    box-shadow: 0px 10px 20px rgb(255, 0, 230);
+  }
+    .shadow-gray {
+    box-shadow: 0px 10px 20px rgb(44, 44, 44);
+  }
+    .shadow-purple {
+    box-shadow: 0px 10px 20px rgb(106, 0, 255);
+  }
+
+}

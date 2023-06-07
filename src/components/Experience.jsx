@@ -15,32 +15,32 @@ import php from '../assets/experience/php.png'
 const Experience = () => {
 
     const techs = [
-        { id:1,src: html, title:'HTML', style: 'shadow-orange-500' },
-        { id:2,src: css,title:'CSS', style: 'shadow-blue-600' },
-        { id:3,src: js, title:'JavaScript',style: 'shadow-yellow-500' },
-        { id:4,src: reactimg, title:'React', style: 'shadow-sky-400' },
-        { id:5,src: vue, title:'Vue', style: 'shadow-green-500' },
-        { id:6,src: angular, title:'Angular', style: 'shadow-red-700' },
-        { id:7,src: uml, title:'UML', style: 'shadow-pink-500' },
-        { id:8,src: tailwind, title:'Tailwind', style: 'shadow-sky-300' },
-        { id:9,src: github, title:'Github', style: 'shadow-gray-400' },
-        { id:10, src: java , title: 'JAVA', style: 'shadow-red-700'},
-        { id:11, src: php, title: 'PHP', style: 'shadow-purple-600'}
+        { id:1,src: html, title:'HTML', style: 'shadow-orange' },
+        { id:2,src: css,title:'CSS', style: 'shadow-blue' },
+        { id:3,src: js, title:'JavaScript',style: 'shadow-yellow' },
+        { id:4,src: reactimg, title:'React', style: 'shadow-sky' },
+        { id:5,src: vue, title:'Vue', style: 'shadow-green' },
+        { id:6,src: angular, title:'Angular', style: 'shadow-red' },
+        { id:7,src: uml, title:'UML', style: 'shadow-pink' },
+        { id:8,src: tailwind, title:'Tailwind', style: 'shadow-sky' },
+        { id:9,src: github, title:'Github', style: 'shadow-gray' },
+        { id:10, src: java , title: 'JAVA', style: 'shadow-red'},
+        { id:11, src: php, title: 'PHP', style: 'shadow-purple'}
     ]
 
   return (
     <div name='Experience' className='w-full py-40 lg:px-10 xl:px-40 '>
-        <div className='maw-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full my-20'> 
-            <div className="rounded-2xl p-6 bg-gradient-to-b from-blue-800 to-transparent" >
+        <div className='maw-w-screen-lg mx-auto p-4 flex flex-col justify-center h-full my-20'> 
+            <div className="rounded-2xl p-6 bg-lightblue" >
                 <div className="w-auto h-auto flex items-center justify-center">
-                    <p className='text-4xl font-bold border-b-4 border-orange-400 inline'> Experience </p>
+                    <h2 className='text-4xl font-bold border-b-4 border-orange inline'> Experience </h2>
                 </div>
                 <p className='py-6 w-auto h-auto flex items-center justify-center'> These are the technologies I have worked with</p> 
-                <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-12'>
+                <div className=' grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-20'>
                     {techs.map(({id,src,title,style}) => (
-                        <div key={id} className={`shadow-lg hover:scale-105 duration-500 py-2 rounded-3xl bg-gradient-to-b from-slate-300 to-slate-600 ${style}`}>
-                            <img src={src} alt="" className='w-20 mx-auto' />
-                            <p className='mt-4'>{title}</p>
+                        <div key={id} className={` py-2 rounded-3xl bg-gradient-to-t from-slate-500 to-slate-300 ${style}`}>
+                            <img src={src} alt='' className='w-20 mx-auto' />
+                            <h3 className='mt-4'>{title}</h3>
                         </div>
                     ))}
                 </div>   

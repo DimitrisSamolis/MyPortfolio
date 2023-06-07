@@ -29,7 +29,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue-900 pb-1">
+    <footer className="bg-blue pb-1 mt-20">
       <div className="mx-auto text-center ">
         <div className="flex justify-center items-center"> Find me on: 
           {links.map(({ id, child, href, download }) => (
