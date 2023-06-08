@@ -1,8 +1,9 @@
-import React, { useRef } from 'react';
+import React, { useRef,useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const form = useRef();
+  const [showAlert, setShowAlert] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -10,8 +11,13 @@ const Contact = () => {
     emailjs.sendForm('service_06g0kl4', 'template_oi3sngf', form.current, 'ENMdmqpl2f8jJnf9O')
       .then((result) => {
           console.log(result.text);
-          alert("Message sent!");
           e.target.reset();
+          setShowAlert(true);
+
+          setTimeout(() => {
+            setShowAlert(false);
+          }, 3000);
+
       }, (error) => {
           console.log(error.text);
       });
@@ -34,6 +40,27 @@ const Contact = () => {
               <textarea name='message' rows='10' placeholder='Enter your message...' required className='p-4 bg-transparent rounded-md border-2 focus:outline-none'></textarea>
               <button type="submit" vallue="Send" className='rounded-md bg-brown px-6 py-3 my-8 mx-auto flex items-center hover:scale-110 duration-300'>Send!</button>
             </form>
+
+            <div
+              className={`fixed top-24 left-50% right-50% bg-white border-t-4 border-brown rounded-md text-blue px-4 py-3 animate-bounce shadow-md ${
+                showAlert ? 'opacity-100' : 'hidden -top-full'
+              }`}
+              role="alert"
+            >
+              <div className="flex">
+                <div className="py-3 pr-2">
+                <svg width="32" height="32" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8l-4.5-4.5l1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"></path>
+               </svg>
+
+                </div>
+                <div>
+                  <p className="font-bold">Message sent!</p>
+                  <p className="text-sm">Thank you for contacting me.</p>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
