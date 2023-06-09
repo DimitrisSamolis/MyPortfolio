@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar";
 import Socials from "./components/Socials";
 import About from "./components/About";
 import Project from "./components/Project";
-import Wallpaper from './assets/background/myportwall.jpg';
-import Wallpaper1 from './assets/background/myportwall1.jpg';
+import Wallpaper from "./assets/background/myportwall.jpg";
+import Wallpaper1 from "./assets/background/myportwall1.jpg";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Loader from "./components/Loader";
@@ -42,7 +42,9 @@ function App() {
   return (
     <div
       style={{
-        backgroundImage: isDarkMode ? `url(${Wallpaper1})` : `url(${Wallpaper})`,
+        backgroundImage: isDarkMode
+          ? `url(${Wallpaper1})`
+          : `url(${Wallpaper})`,
         color: isDarkMode ? "#111" : "#fff",
       }}
     >
