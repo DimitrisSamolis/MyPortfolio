@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonFill } from "react-icons/bs";
 
 const Footer = () => {
   const links = [
@@ -19,13 +18,7 @@ const Footer = () => {
       id: 3,
       child: <HiOutlineMail size={20} />,
       href: "mailto:dimitrissamolis2001@gmai.com",
-    },
-    {
-      id: 4,
-      child: <BsFillPersonFill size={20} />,
-      href: "/CV-DS.pdf",
-      download: true,
-    },
+    }
   ];
 
   return (
@@ -33,12 +26,11 @@ const Footer = () => {
       <div className="mx-auto text-center ">
         <div className="flex justify-center items-center">
           Find me on:
-          {links.map(({ id, child, href, download }) => (
+          {links.map(({ id, child, href }) => (
             <div key={id} className="mx-2">
               <a
                 href={href}
                 className=" px-2"
-                download={download}
                 target="_blank"
                 rel="noreferrer"
               >

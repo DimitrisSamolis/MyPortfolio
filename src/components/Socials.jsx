@@ -1,7 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
-import { BsFillPersonFill } from "react-icons/bs";
 
 const Socials = () => {
   const links = [
@@ -32,19 +31,8 @@ const Socials = () => {
         </>
       ),
       href: "mailto:dimitrissamolis2001@gmai.com",
-    },
-    {
-      id: 4,
-      child: (
-        <> 
-          Resume
-          <BsFillPersonFill size={30} />
-        </>
-      ),
-      href: "/CV-DS.pdf",
-      style: "rounded-br-md",
-      download: true,
-    },
+      style: "rounded-br-md"
+    }
   ];
   return (
     <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
@@ -57,7 +45,6 @@ const Socials = () => {
             <a
               href={href}
               className="flex justify-between pl-1 items-center w-full "
-              download={download}
               target="_blank"
               rel="noreferrer"
             >
