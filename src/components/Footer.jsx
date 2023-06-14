@@ -13,7 +13,7 @@ const Footer = () => {
     {
       id: 2,
       child: <FaGithub size={20} />,
-      href: "https://github.com/Dimitris155",
+      href: "https://github.com/DimitrisSamolis",
     },
     {
       id: 3,
