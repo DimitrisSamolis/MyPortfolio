@@ -7,7 +7,7 @@ import img5 from "../assets/projects/img5.png";
 import img6 from "../assets/projects/img6.jpg";
 import { FaGithub } from "react-icons/fa";
 
-const Projects = () => {
+const Projects = ({isDarkMode}) => {
   const projects = [
     {
       id: 1,
@@ -56,7 +56,9 @@ const Projects = () => {
   return (
     <div name="Projects" className="w-full lg:px-10 xl:px-40">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ">
-        <div className="rounded-2xl p-6 bg-lightblue">
+        <div className={`rounded-2xl p-6 ${
+            isDarkMode ? "bg-blue" : "bg-lightblue"
+          }`}>
           <div className="w-auto h-auto flex items-center justify-center">
             <h2 className="text-4xl font-bold inline border-b-4 border-orange">
               Projects

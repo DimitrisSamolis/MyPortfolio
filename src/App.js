@@ -52,14 +52,14 @@ function App() {
         <Loader />
       ) : (
         <div>
-          <NavBar />
-          <Home />
-          <About />
-          <Project />
-          <Experience />
-          <Contact />
-          <Socials />
-          <Footer />
+          <NavBar isDarkMode={isDarkMode} />
+          <Home isDarkMode={isDarkMode} />
+          <About isDarkMode={isDarkMode} />
+          <Project isDarkMode={isDarkMode} />
+          <Experience isDarkMode={isDarkMode} />
+          <Contact isDarkMode={isDarkMode} />
+          <Socials isDarkMode={isDarkMode} />
+          <Footer isDarkMode={isDarkMode} />
           <SwitchMode isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
         </div>
       )}

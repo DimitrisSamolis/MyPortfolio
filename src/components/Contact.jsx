@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+const Contact = ({isDarkMode}) => {
   const form = useRef();
   const [showAlert, setShowAlert] = useState(false);
 
@@ -34,7 +34,9 @@ const Contact = () => {
   return (
     <div name="Contact" className="w-full lg:px-10 xl:px-40">
       <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full">
-        <div className="pb-2 rounded-2xl p-6 bg-lightblue">
+        <div className={`pb-2 rounded-2xl p-6 ${
+            isDarkMode ? "bg-blue" : "bg-lightblue"
+          }`}>
           <div className="w-auto h-auto flex items-center justify-center">
             <h2 className="text-4xl font-bold border-b-4 border-orange inline">
               Contact

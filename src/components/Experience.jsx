@@ -11,7 +11,7 @@ import uml from "../assets/experience/uml.png";
 import java from "../assets/experience/java.png";
 import php from "../assets/experience/php.png";
 
-const Experience = () => {
+const Experience = ({isDarkMode}) => {
   const techs = [
     { id: 1, src: html, title: "HTML", style: "shadow-orange" },
     { id: 2, src: css, title: "CSS", style: "shadow-blue" },
@@ -29,7 +29,9 @@ const Experience = () => {
   return (
     <div name="Experience" className="w-full py-40 lg:px-10 xl:px-40 ">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center h-full my-20">
-        <div className="rounded-2xl p-6 bg-lightblue">
+        <div className={`rounded-2xl p-6 ${
+            isDarkMode ? "bg-blue" : "bg-lightblue"
+          }`}>
           <div className="w-auto h-auto flex items-center justify-center">
             <h2 className="text-4xl font-bold border-b-4 border-orange inline">
               Experience

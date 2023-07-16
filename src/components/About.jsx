@@ -1,10 +1,12 @@
 import React from "react";
 
-const About = () => {
+const About = ({isDarkMode}) => {
   return (
     <div name="About" className="w-full py-32 lg:px-10 xl:px-40">
       <div className="max-w-screen-lg p-6 mx-auto flex flex-col justify-center w-full h-full ">
-        <div className="rounded-2xl p-6 bg-lightblue ">
+        <div className={`rounded-2xl p-6 ${
+            isDarkMode ? "bg-blue" : "bg-lightblue"
+          } `}>
           <div className=" w-auto h-auto flex items-center justify-center pb-8">
             <h2 className="text-4xl font-bold inline border-b-4 border-orange">
               About

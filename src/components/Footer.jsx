@@ -2,7 +2,7 @@ import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 
-const Footer = () => {
+const Footer = ({isDarkMode}) => {
   const links = [
     {
       id: 1,
@@ -22,7 +22,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-blue pb-1 mt-20">
+    <footer className={`${
+      isDarkMode ? "bg-sky-900" : "bg-sky-600"
+    } pb-1 mt-20`}>
       <div className="mx-auto text-center ">
         <div className="flex justify-center items-center">
           Find me on:

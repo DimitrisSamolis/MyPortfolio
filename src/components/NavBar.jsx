@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 import account from "../assets/home/acc.png";
 
-const NavBar = () => {
+const NavBar = ({isDarkMode}) => {
   const [nav, setNav] = useState(false);
 
   const links = [
@@ -14,18 +14,23 @@ const NavBar = () => {
     {
       id: 2,
       link: "About",
+      position: 50,
     },
     {
       id: 3,
       link: "Projects",
+      position: -80,
     },
     {
       id: 4,
       link: "Experience",
+      position: 170,
     },
     {
       id: 5,
       link: "Contact",
+      position: -80,
+
     },
   ];
 
@@ -35,7 +40,9 @@ const NavBar = () => {
 
   return (
     <div
-      className="flex justify-between items-center w-full h-16 px-4 fixed bg-blue z-50"
+      className={`flex justify-between items-center w-full h-16 px-4 fixed z-50 ${
+        isDarkMode ? "bg-sky-900" : "bg-sky-600"
+      }`} 
     >
       <div className="flex items-center cursor-pointer" onClick={refreshPage}>
         <h1 className="text-2xl md:text-4xl font-mono ml-2 hover:text-orange duration-200">
@@ -45,7 +52,7 @@ const NavBar = () => {
       </div>
 
       <ul className={`hidden md:flex ${nav ? "hidden" : ""}`}>
-        {links.map(({ id, link }) => (
+        {links.map(({ id, link ,position }) => (
           <li
             key={id}
             className="px-4 cursor-pointer capitalize font-medium"
@@ -55,6 +62,7 @@ const NavBar = () => {
               smooth
               duration={800}
               className="hover:text-orange duration-200"
+              offset={position}
             >
               {link}
             </Link>
