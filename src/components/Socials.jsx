@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { HiOutlineMail ,HiOutlinePhone} from "react-icons/hi";
 
 const Socials = ({isDarkMode}) => {
   const links = [
@@ -30,14 +30,23 @@ const Socials = ({isDarkMode}) => {
           Mail <HiOutlineMail size={30} />
         </>
       ),
-      href: "mailto:dimitrissamolis2001@gmai.com",
+      href: "mailto:dimitrissamolis2001@gmail.com",
+    },
+    {
+      id: 4,
+      child: (
+        <>
+          Call <HiOutlinePhone size={30} />
+        </>
+      ),
+      href: "tel:+6949227199",
       style: "rounded-br-md"
     }
   ];
   return (
     <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">
       <ul>
-        {links.map(({ id, child, href, style, download }) => (
+        {links.map(({ id, child, href, style }) => (
           <li
             key={id}
             className={`flex justify-between items-center w-36 h-14 px-2 bg-orange ml-[-100px] hover:ml-[-10px] hover:rounded-md duration-300 ${style}`}

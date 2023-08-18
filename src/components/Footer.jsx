@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import { HiOutlineMail ,HiOutlinePhone} from "react-icons/hi";
 
 const Footer = ({isDarkMode}) => {
   const links = [
@@ -18,6 +18,11 @@ const Footer = ({isDarkMode}) => {
       id: 3,
       child: <HiOutlineMail size={20} />,
       href: "mailto:dimitrissamolis2001@gmai.com",
+    },
+    {
+      id: 4,
+      child: <HiOutlinePhone size={20} />,
+      href: "tel:+6949227199",
     }
   ];
 
