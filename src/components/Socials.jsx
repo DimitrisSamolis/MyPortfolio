@@ -39,7 +39,7 @@ const Socials = ({isDarkMode}) => {
           Call <HiOutlinePhone size={30} />
         </>
       ),
-      href: "tel:+6949227199",
+      href: "tel:+306949227199",
       style: "rounded-br-md"
     }
   ];

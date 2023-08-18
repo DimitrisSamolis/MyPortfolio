@@ -22,7 +22,7 @@ const Footer = ({isDarkMode}) => {
     {
       id: 4,
       child: <HiOutlinePhone size={20} />,
-      href: "tel:+6949227199",
+      href: "tel:+306949227199",
     }
   ];
 
