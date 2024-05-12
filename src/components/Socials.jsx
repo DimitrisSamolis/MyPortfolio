@@ -1,8 +1,8 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail ,HiOutlinePhone} from "react-icons/hi";
+import { HiOutlineMail } from "react-icons/hi";
 
-const Socials = ({isDarkMode}) => {
+const Socials = () => {
   const links = [
     {
       id: 1,
@@ -26,22 +26,13 @@ const Socials = ({isDarkMode}) => {
     {
       id: 3,
       child: (
-        <> 
+        <>
           Mail <HiOutlineMail size={30} />
         </>
       ),
       href: "mailto:dimitrissamolis2001@gmail.com",
+      style: "rounded-br-md",
     },
-    {
-      id: 4,
-      child: (
-        <>
-          Call <HiOutlinePhone size={30} />
-        </>
-      ),
-      href: "tel:+306949227199",
-      style: "rounded-br-md"
-    }
   ];
   return (
     <div className="hidden lg:flex flex-col top-[35%] left-0 fixed">

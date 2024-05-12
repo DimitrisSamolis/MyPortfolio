@@ -3,11 +3,27 @@ import MyImage from "../assets/home/img_crp.jpg";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { MdOutlineSwipeVertical } from "react-icons/md";
 import { Link } from "react-scroll";
+import { useInView } from "react-intersection-observer";
 
 const Home = ({ isDarkMode }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
-    <div name="Home" className="w-full lg:px-10 xl:px-40 py-20 md:mb-0">
-      <div className="max-w-screen-lg h-full mx-auto flex items-center justify-center mt-20 sm:mt-24 p-4 md:flex-row">
+    <div
+      ref={ref}
+      name="Home"
+      className={`w-full lg:px-10 xl:px-40 py-20 md:mb-0 ${
+        inView ? "active" : ""
+      }`}
+    >
+      <div
+        className={`max-w-screen-lg h-full mx-auto flex items-center justify-center mt-20 sm:mt-24 p-4 md:flex-row slide-in ${
+          inView ? "active" : ""
+        }`}
+      >
         <div
           className={`rounded-3xl p-6 w-auto h-auto flex items-center justify-center ${
             isDarkMode ? "bg-blue" : "bg-lightblue"
@@ -26,6 +42,7 @@ const Home = ({ isDarkMode }) => {
                 to="Projects"
                 smooth
                 duration={500}
+                offset={-80}
                 className="group w-fit p-2 my-3 flex items-center rounded-xl bg-brown cursor-pointer"
               >
                 My Projects

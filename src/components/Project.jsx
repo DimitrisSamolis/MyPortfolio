@@ -6,8 +6,9 @@ import img4 from "../assets/projects/img4.jpg";
 import img5 from "../assets/projects/img5.png";
 import img6 from "../assets/projects/img6.jpg";
 import { FaGithub } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
 
-const Projects = ({isDarkMode}) => {
+const Projects = ({ isDarkMode }) => {
   const projects = [
     {
       id: 1,
@@ -53,12 +54,23 @@ const Projects = ({isDarkMode}) => {
     },
   ];
 
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
-    <div name="Projects" className="w-full lg:px-10 xl:px-40">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ">
-        <div className={`rounded-2xl p-6 ${
+    <div ref={ref} name="Projects" className="w-full lg:px-10 xl:px-40">
+      <div
+        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ${
+          inView ? "active" : ""
+        }`}
+      >
+        <div
+          className={`rounded-2xl p-6 ${
             isDarkMode ? "bg-blue" : "bg-lightblue"
-          }`}>
+          } slide-in ${inView ? "active" : ""}`}
+        >
           <div className="w-auto h-auto flex items-center justify-center">
             <h2 className="text-4xl font-bold inline border-b-4 border-orange">
               Projects
@@ -71,7 +83,7 @@ const Projects = ({isDarkMode}) => {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 my-6">
             {projects.map(({ id, langs, title, src, href }) => (
               <a href={href} target="_blank" rel="noopener noreferrer" key={id}>
-                <div className="shadow-lg shadow-cyan hover:scale-105 duration-500 rounded-2xl relative">
+                <div className="shadow-lg shadow-cyan hover:scale-105 duration-500 rounded-2xl relative hover:skew-y-2">
                   <img src={src} alt="" className="rounded-t-2xl " />
                   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-90 transition-opacity">
                     <div className="bg-white border hover:animate-pulse border-orange w-full h-full flex flex-col items-center justify-center rounded-2xl">

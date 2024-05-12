@@ -10,8 +10,9 @@ import angular from "../assets/experience/angular.png";
 import uml from "../assets/experience/uml.png";
 import java from "../assets/experience/java.png";
 import php from "../assets/experience/php.png";
+import { useInView } from "react-intersection-observer";
 
-const Experience = ({isDarkMode}) => {
+const Experience = ({ isDarkMode }) => {
   const techs = [
     { id: 1, src: html, title: "HTML", style: "shadow-orange" },
     { id: 2, src: css, title: "CSS", style: "shadow-blue" },
@@ -26,12 +27,27 @@ const Experience = ({isDarkMode}) => {
     { id: 11, src: php, title: "PHP", style: "shadow-purple" },
   ];
 
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
-    <div name="Experience" className="w-full py-40 lg:px-10 xl:px-40 ">
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center h-full my-20">
-        <div className={`rounded-2xl p-6 ${
+    <div
+      ref={ref}
+      name="Experience"
+      className="w-full py-40 lg:px-10 xl:px-40 "
+    >
+      <div
+        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ${
+          inView ? "active" : ""
+        }`}
+      >
+        <div
+          className={`rounded-2xl p-6 ${
             isDarkMode ? "bg-blue" : "bg-lightblue"
-          }`}>
+          } slide-in ${inView ? "active" : ""}`}
+        >
           <div className="w-auto h-auto flex items-center justify-center">
             <h2 className="text-4xl font-bold border-b-4 border-orange inline">
               Experience

@@ -1,12 +1,24 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 
-const About = ({isDarkMode}) => {
+const About = ({ isDarkMode }) => {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+    triggerOnce: true,
+  });
+
   return (
-    <div name="About" className="w-full py-32 lg:px-10 xl:px-40">
-      <div className="max-w-screen-lg p-6 mx-auto flex flex-col justify-center w-full h-full ">
-        <div className={`rounded-2xl p-6 ${
+    <div ref={ref} name="About" className="w-full py-32 lg:px-10 xl:px-40">
+      <div
+        className={`max-w-screen-lg p-6 mx-auto flex flex-col justify-center w-full h-full ${
+          inView ? "active" : ""
+        }`}
+      >
+        <div
+          className={`rounded-2xl p-6 ${
             isDarkMode ? "bg-blue" : "bg-lightblue"
-          } `}>
+          } slide-in ${inView ? "active" : ""}`}
+        >
           <div className=" w-auto h-auto flex items-center justify-center pb-8">
             <h2 className="text-4xl font-bold inline border-b-4 border-orange">
               About
