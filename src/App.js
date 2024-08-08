@@ -51,7 +51,7 @@ function App() {
       {isLoading ? (
         <Loader />
       ) : (
-        <Router>
+        <Router basename="/MyPortfolio">
           <NavBar isDarkMode={isDarkMode} />
           <div className="flex-grow fade-in">
             <Routes>
