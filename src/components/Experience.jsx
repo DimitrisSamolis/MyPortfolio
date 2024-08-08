@@ -10,9 +10,10 @@ import angular from "../assets/experience/angular.png";
 import uml from "../assets/experience/uml.png";
 import java from "../assets/experience/java.png";
 import php from "../assets/experience/php.png";
+import azure from "../assets/experience/azure.png";
 import { useInView } from "react-intersection-observer";
 
-const Experience = ({ isDarkMode }) => {
+const Experience = () => {
   const techs = [
     { id: 1, src: html, title: "HTML", style: "shadow-orange" },
     { id: 2, src: css, title: "CSS", style: "shadow-blue" },
@@ -25,6 +26,7 @@ const Experience = ({ isDarkMode }) => {
     { id: 9, src: github, title: "Github", style: "shadow-gray" },
     { id: 10, src: java, title: "JAVA", style: "shadow-red" },
     { id: 11, src: php, title: "PHP", style: "shadow-purple" },
+    { id: 12, src: azure, title: "Azure DevOps", style: "shadow-blue" },
   ];
 
   const { ref, inView } = useInView({
@@ -36,25 +38,29 @@ const Experience = ({ isDarkMode }) => {
     <div
       ref={ref}
       name="Experience"
-      className="w-full py-40 lg:px-10 xl:px-40 "
+      className="w-full py-32 lg:px-10 xl:px-40 "
     >
       <div
-        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ${
+        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ${
           inView ? "active" : ""
         }`}
       >
         <div
-          className={`rounded-2xl p-6 ${
-            isDarkMode ? "bg-blue" : "bg-lightblue"
-          } slide-in ${inView ? "active" : ""}`}
+          className={`rounded-2xl p-8 shadow-lg p-6  slide-in ${
+            inView ? "active" : ""
+          }`}
         >
-          <div className="w-auto h-auto flex items-center justify-center">
+          <div className="w-auto h-auto flex ">
             <h2 className="text-4xl font-bold border-b-4 border-orange inline">
               Experience
             </h2>
           </div>
-          <p className="py-6 w-auto h-auto flex items-center justify-center">
-            These are the technologies I have worked with
+          <p className="py-6 w-auto h-auto flex ">
+            I’ve had the opportunity to work with a diverse set of technologies
+            throughout my development journey. Each project has allowed me to
+            refine my skills and gain hands-on experience with these tools.
+            Here’s a glimpse of the technologies I’ve utilized to build robust
+            and dynamic web applications.
           </p>
           <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center py-8 px-20">
             {techs.map(({ id, src, title, style }) => (

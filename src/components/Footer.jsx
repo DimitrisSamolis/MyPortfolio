@@ -23,13 +23,15 @@ const Footer = ({ isDarkMode }) => {
 
   return (
     <footer
-      className={`${isDarkMode ? "bg-sky-900" : "bg-sky-600"} pb-1 mt-20`}
+      className={`${
+        isDarkMode ? "bg-indigo-800" : "bg-indigo-400"
+      } pb-1 mt-auto`}
     >
-      <div className="mx-auto text-center ">
+      <div className="mx-auto text-center">
         <div className="flex justify-center items-center">
           Find me on:
           {links.map(({ id, child, href }) => (
-            <div key={id} className="mx-2">
+            <div key={id} className="mx-2 hover:text-orange">
               <a href={href} className=" px-2" target="_blank" rel="noreferrer">
                 {child}
               </a>

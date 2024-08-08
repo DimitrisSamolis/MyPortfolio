@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Socials from "./components/Socials";
 import About from "./components/About";
-import Project from "./components/Project";
-import Wallpaper from "./assets/background/myportwall.jpg";
-import Wallpaper1 from "./assets/background/myportwall1.jpg";
+import Projects from "./components/Project";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Loader from "./components/Loader";
@@ -42,26 +41,43 @@ function App() {
   return (
     <div
       style={{
-        backgroundImage: isDarkMode
-          ? `url(${Wallpaper1})`
-          : `url(${Wallpaper})`,
+        background: isDarkMode
+          ? "linear-gradient(135deg, #0731c1bf, #002c57)"
+          : "linear-gradient(135deg, #3771e0cc, #32c5ff4a)",
         color: isDarkMode ? "#111" : "#fff",
       }}
+      className="flex flex-col min-h-screen transition-all duration-500 ease-in-out"
     >
       {isLoading ? (
         <Loader />
       ) : (
-        <div>
+        <Router>
           <NavBar isDarkMode={isDarkMode} />
-          <Home isDarkMode={isDarkMode} />
-          <About isDarkMode={isDarkMode} />
-          <Project isDarkMode={isDarkMode} />
-          <Experience isDarkMode={isDarkMode} />
-          <Contact isDarkMode={isDarkMode} />
+          <div className="flex-grow fade-in">
+            <Routes>
+              <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+              <Route
+                path="/about"
+                element={<About isDarkMode={isDarkMode} />}
+              />
+              <Route
+                path="/projects"
+                element={<Projects isDarkMode={isDarkMode} />}
+              />
+              <Route
+                path="/experience"
+                element={<Experience isDarkMode={isDarkMode} />}
+              />
+              <Route
+                path="/contact"
+                element={<Contact isDarkMode={isDarkMode} />}
+              />
+            </Routes>
+          </div>
           <Socials isDarkMode={isDarkMode} />
           <Footer isDarkMode={isDarkMode} />
           <SwitchMode isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-        </div>
+        </Router>
       )}
     </div>
   );

@@ -8,7 +8,7 @@ import img6 from "../assets/projects/img6.jpg";
 import { FaGithub } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
-const Projects = ({ isDarkMode }) => {
+const Projects = () => {
   const projects = [
     {
       id: 1,
@@ -60,26 +60,28 @@ const Projects = ({ isDarkMode }) => {
   });
 
   return (
-    <div ref={ref} name="Projects" className="w-full lg:px-10 xl:px-40">
+    <div ref={ref} name="Projects" className="w-full lg:px-10 xl:px-40 py-32">
       <div
-        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full my-20 ${
+        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ${
           inView ? "active" : ""
         }`}
       >
         <div
-          className={`rounded-2xl p-6 ${
-            isDarkMode ? "bg-blue" : "bg-lightblue"
-          } slide-in ${inView ? "active" : ""}`}
+          className={`rounded-2xl p-8 shadow-lg p-6 slide-in ${
+            inView ? "active" : ""
+          }`}
         >
-          <div className="w-auto h-auto flex items-center justify-center">
+          <div className="w-auto h-auto flex">
             <h2 className="text-4xl font-bold inline border-b-4 border-orange">
               Projects
             </h2>
           </div>
-          <p className="py-6 w-auto h-auto flex items-center justify-center">
-            Check out some of my projects here
+          <p className="py-6 w-auto h-auto flex ">
+            Here’s a showcase of some of my projects. From innovative web apps
+            to interactive interfaces, these projects highlight my skills in
+            various technologies and frameworks. Dive into each project to see
+            how I implement solutions.
           </p>
-
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 my-6">
             {projects.map(({ id, langs, title, src, href }) => (
               <a href={href} target="_blank" rel="noopener noreferrer" key={id}>

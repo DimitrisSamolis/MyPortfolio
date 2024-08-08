@@ -21,7 +21,6 @@ const Contact = ({ isDarkMode }) => {
           console.log(result.text);
           e.target.reset();
           setShowAlert(true);
-
           setTimeout(() => {
             setShowAlert(false);
           }, 3000);
@@ -38,83 +37,87 @@ const Contact = ({ isDarkMode }) => {
   });
 
   return (
-    <div ref={ref} name="Contact" className="w-full lg:px-10 xl:px-40">
+    <div
+      ref={ref}
+      name="Contact"
+      className={`w-full py-32 lg:px-10 xl:px-40 ${inView ? "active" : ""}`}
+    >
       <div
-        className={`flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full ${
+        className={`max-w-screen-lg mx-auto flex flex-col justify-center slide-in ${
           inView ? "active" : ""
         }`}
       >
-        <div
-          className={`pb-2 rounded-2xl p-6 ${
-            isDarkMode ? "bg-blue" : "bg-lightblue"
-          } slide-in ${inView ? "active" : ""}`}
-        >
-          <div className="w-auto h-auto flex items-center justify-center">
-            <h2 className="text-4xl font-bold border-b-4 border-orange inline">
-              Contact
+        <div className={`rounded-3xl p-8 shadow-lg ${inView ? "active" : ""}`}>
+          <div className=" pb-8">
+            <h2 className="text-4xl font-bold border-b-4 border-orange pb-2 inline-block">
+              Contact Me
             </h2>
+            <p className="mt-4 text-lg ">
+              Feel free to drop a message or inquiry using the form below. I’ll
+              get back to you as soon as possible!
+            </p>
           </div>
-          <p className="py-6 w-auto h-auto flex items-center justify-center">
-            Submit the form below to get in touch
-          </p>
-          <div className="flex justify-center items-center">
-            <form
-              ref={form}
-              onSubmit={sendEmail}
-              className="flex flex-col w-full md:w-1/2"
-            >
-              <input
-                type="text"
-                name="user_name"
-                placeholder="Enter your name..."
-                required
-                className="p-2 bg-transparent rounded-md border-2 focus:outline-none"
-              />
-              <input
-                type="email"
-                name="user_email"
-                placeholder="Enter your email..."
-                required
-                className="p-2 my-4 bg-transparent rounded-md border-2 focus:outline-none"
-                pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-              />
-              <textarea
-                name="message"
-                rows="10"
-                placeholder="Enter your message..."
-                required
-                className="p-4 bg-transparent rounded-md border-2 focus:outline-none"
-              ></textarea>
-              <button
-                type="submit"
-                className="rounded-md bg-brown px-6 py-3 my-8 mx-auto flex items-center hover:scale-110 duration-300"
-              >
-                Send!
-              </button>
-            </form>
 
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            className="flex flex-col space-y-4"
+          >
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              required
+              className="p-4 text-black border-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange"
+            />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Your Email"
+              required
+              className="p-4 text-black border-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange"
+              pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+            />
+            <textarea
+              name="message"
+              rows="6"
+              placeholder="Your Message"
+              required
+              className="p-4 text-black border-2 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-orange"
+            ></textarea>
+            <button
+              type="submit"
+              className="bg-orange py-3 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Send Message
+            </button>
+          </form>
+
+          {showAlert && (
             <div
-              className={`fixed top-24 left-50% right-50% bg-white border-t-4 border-brown rounded-md text-blue px-4 py-3 animate-bounce shadow-md ${
-                showAlert ? "opacity-100" : "hidden -top-full"
-              }`}
+              className="mt-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
               role="alert"
             >
-              <div className="flex">
-                <div className="py-3 pr-2">
-                  <svg width="32" height="32" viewBox="0 0 24 24">
-                    <path
-                      fill="currentColor"
-                      d="M20 16v-6h2v6a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2h8v2H8v12h12m-9.09-8.92L14 10.17l6.59-6.59L22 5l-8 8l-4.5-4.5l1.41-1.42M16 20v2H4a2 2 0 0 1-2-2V7h2v13h12Z"
-                    ></path>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-bold">Message sent!</p>
-                  <p className="text-sm">Thank you for contacting me.</p>
-                </div>
-              </div>
+              <strong className="font-bold">Message Sent!</strong>
+              <span className="block sm:inline">
+                {" "}
+                Thank you for reaching out. I’ll get back to you soon.
+              </span>
+              <button
+                onClick={() => setShowAlert(false)}
+                className="absolute top-0 right-0 px-4 py-3"
+              >
+                <svg
+                  className="fill-current text-green-500"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6.293 4.293a1 1 0 0 1 1.414 0L12 7.586l4.293-4.293a1 1 0 1 1 1.414 1.414L13.414 9l4.293 4.293a1 1 0 0 1-1.414 1.414L12 10.828l-4.293 4.293a1 1 0 0 1-1.414-1.414L10.586 12 6.293 7.707a1 1 0 0 1 0-1.414z"></path>
+                </svg>
+              </button>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

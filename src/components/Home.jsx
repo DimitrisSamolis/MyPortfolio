@@ -1,8 +1,7 @@
 import React from "react";
 import MyImage from "../assets/home/img_crp.jpg";
 import { BsArrowRightCircle } from "react-icons/bs";
-import { MdOutlineSwipeVertical } from "react-icons/md";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 
 const Home = ({ isDarkMode }) => {
@@ -15,55 +14,44 @@ const Home = ({ isDarkMode }) => {
     <div
       ref={ref}
       name="Home"
-      className={`w-full lg:px-10 xl:px-40 py-20 md:mb-0 ${
-        inView ? "active" : ""
-      }`}
+      className={`w-full lg:px-10 xl:px-40 py-32  ${inView ? "active" : ""}`}
     >
       <div
-        className={`max-w-screen-lg h-full mx-auto flex items-center justify-center mt-20 sm:mt-24 p-4 md:flex-row slide-in ${
+        className={`max-w-screen-lg mx-auto flex flex-col md:flex-row items-center justify-between slide-in ${
           inView ? "active" : ""
         }`}
       >
-        <div
-          className={`rounded-3xl p-6 w-auto h-auto flex items-center justify-center ${
-            isDarkMode ? "bg-blue" : "bg-lightblue"
-          }`}
-        >
-          <div className="flex flex-col justify-center px-2 sm:px-6 font-semi">
-            <h1 className="text-4xl pb-8">Welcome to my Portfolio!</h1>
-            <p className={`p-2 my-2 max-w-md`}>
-              Hello! I'm Dimitris, a passionate and dedicated junior front-end
-              developer. Currently, I am studying at the University of Piraeus,
-              where I am honing my skills and expanding my knowledge in the
-              field of web development.
-            </p>
-            <div>
-              <Link
-                to="Projects"
-                smooth
-                duration={500}
-                offset={-80}
-                className="group w-fit p-2 my-3 flex items-center rounded-xl bg-brown cursor-pointer"
-              >
-                My Projects
-                <span className="p-2 group-hover:rotate-90 duration-300">
-                  <BsArrowRightCircle size={20} />
-                </span>
-              </Link>
-            </div>
-          </div>
-          <div className="my-4">
-            <img
-              src={MyImage}
-              alt="my profile"
-              className="shadow-2xl shadow-black rounded-3xl max-w-md h-auto md:w-32 w-24 text-right justify-between"
-            />
-          </div>
+        <div className="flex flex-col items-start md:items-center text-center md:text-left space-y-4 md:space-y-6 px-4 md:px-6">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-center">
+            Welcome to my Portfolio!
+          </h1>
+          <p className="text-lg md:text-xl max-w-lg">
+            Hello! I'm Dimitris, a passionate and dedicated front-end developer.
+            I have completed my Bachelor's degree at the University of Piraeus,
+            where I honed my skills and expanded my knowledge in the field of
+            web development.
+          </p>
+          <Link
+            to="/projects"
+            className="group w-fit flex items-center rounded-xl bg-orange p-3 transition-transform duration-300 ease-in-out hover:bg-blue-700 hover:scale-105"
+          >
+            <span className="flex items-center space-x-2">
+              <span>My Projects</span>
+              <BsArrowRightCircle
+                size={20}
+                className="transition-transform transform group-hover:translate-x-2 duration-300"
+              />
+            </span>
+          </Link>
+        </div>
+        <div className="mt-8 md:mt-0">
+          <img
+            src={MyImage}
+            alt="Dimitris"
+            className="rounded-full shadow-xl max-w-xs md:max-w-sm h-auto"
+          />
         </div>
       </div>
-      <span className="flex my-8 justify-center items-center animate-bounce sm:hidden">
-        <MdOutlineSwipeVertical color={"white"} size={30} />
-      </span>
     </div>
   );
 };
