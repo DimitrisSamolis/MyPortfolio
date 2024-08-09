@@ -44,7 +44,7 @@ function App() {
         background: isDarkMode
           ? "linear-gradient(135deg, #0731c1bf, #002c57)"
           : "linear-gradient(135deg, #3771e0cc, #32c5ff4a)",
-        color: isDarkMode ? "#111" : "#fff",
+        color: isDarkMode ? "#fff" : "#111",
       }}
       className="flex flex-col min-h-screen transition-all duration-500 ease-in-out"
     >

@@ -43,7 +43,7 @@ const Contact = ({ isDarkMode }) => {
       className={`w-full py-32 lg:px-10 xl:px-40 ${inView ? "active" : ""}`}
     >
       <div
-        className={`max-w-screen-lg mx-auto flex flex-col justify-center slide-in ${
+        className={`max-w-screen-lg mx-auto flex flex-col p-4 justify-center slide-in ${
           inView ? "active" : ""
         }`}
       >

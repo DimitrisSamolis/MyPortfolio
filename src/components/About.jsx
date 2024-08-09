@@ -1,5 +1,7 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
+import { BsArrowRightCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const { ref, inView } = useInView({
@@ -10,7 +12,7 @@ const About = () => {
   return (
     <div ref={ref} name="About" className={`w-full py-32 lg:px-10 xl:px-40 `}>
       <div
-        className={`max-w-screen-lg mx-auto flex flex-col justify-center w-full h-full ${
+        className={`max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ${
           inView ? "active" : ""
         }`}
       >
@@ -56,6 +58,13 @@ const About = () => {
             explore my projects and get in touch with me. I look forward to
             connecting with you and discussing potential collaborations.
           </p>
+          <Link
+            to="/experience"
+            className="inline-flex items-center space-x-3 text-lg bg-orange font-medium my-8 py-3 px-6 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <span>Technologies that I have worked with</span>
+            <BsArrowRightCircle size={24} />
+          </Link>
         </div>
       </div>
     </div>

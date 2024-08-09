@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import account from "../assets/home/acc.png";
 
 const NavBar = ({ isDarkMode }) => {
   const [nav, setNav] = useState(false);
@@ -9,8 +8,8 @@ const NavBar = ({ isDarkMode }) => {
   const links = [
     { id: 1, link: "Home", path: "/" },
     { id: 2, link: "About", path: "/about" },
-    { id: 3, link: "Projects", path: "/projects" },
-    { id: 4, link: "Experience", path: "/experience" },
+    { id: 3, link: "Experience", path: "/experience" },
+    { id: 4, link: "Projects", path: "/projects" },
     { id: 5, link: "Contact", path: "/contact" },
   ];
 
@@ -21,21 +20,20 @@ const NavBar = ({ isDarkMode }) => {
       } shadow-lg `}
     >
       <div className="flex items-center">
-        <h1 className="text-2xl md:text-4xl font-mono ml-2 hover:text-orange duration-200 cursor-pointer">
-          <Link to="/">D-Sam</Link>
+        <h1 className="text-xl lg:text-4xl font-mono ml-2 hover:text-orange duration-200 cursor-pointer">
+          <Link to="/">Dimitris Samolis</Link>
         </h1>
-        <img src={account} alt="my account" className="h-8 md:h-10 ml-2" />
       </div>
 
       <ul className={`hidden md:flex ${nav ? "hidden" : ""}`}>
         {links.map(({ id, link, path }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer capitalize font-medium hover:text-orange duration-200"
+            className="px-4 cursor-pointer font-mono hover:text-orange duration-200"
           >
             <Link
               to={path}
-              className="hover:text-orange-400"
+              className="hover:text-orange"
               onClick={() => setNav(false)}
             >
               {link}
@@ -46,22 +44,22 @@ const NavBar = ({ isDarkMode }) => {
 
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 md:hidden hover:text-orange duration-200 z-50"
+        className="cursor-pointer pr-4 md:hidden hover:text-orange font-mono duration-200 z-50"
       >
         {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
       </div>
 
       {nav && (
-        <ul className="flex flex-col bg-inherit justify-center items-center absolute top-0 left-0 w-full h-screen ">
+        <ul className="flex flex-col bg-inherit justify-center font-mono items-center absolute top-0 left-0 w-full h-screen ">
           {links.map(({ id, link, path }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-3xl hover:text-orange hover:scale-105 duration-200"
+              className="px-4 cursor-pointer font-mono py-6 text-3xl hover:text-orange hover:scale-105 duration-200"
             >
               <Link
                 onClick={() => setNav(!nav)}
                 to={path}
-                className="px-4 cursor-pointer capitalize py-6 text-3xl hover:scale-105 duration-200 hover:text-orange rounded-xl"
+                className="px-4 cursor-pointer font-mono py-6 text-3xl hover:scale-105 duration-200 hover:text-orange rounded-xl"
               >
                 {link}
               </Link>
