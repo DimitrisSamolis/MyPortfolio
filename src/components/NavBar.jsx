@@ -20,7 +20,7 @@ const NavBar = ({ isDarkMode }) => {
       } shadow-lg `}
     >
       <div className="flex items-center">
-        <h1 className="text-xl lg:text-4xl font-mono ml-2 hover:text-orange duration-200 cursor-pointer">
+        <h1 className="text-xl lg:text-4xl font-mono font-bold ml-2 hover:text-orange duration-200 cursor-pointer">
           <Link to="/">Dimitris Samolis</Link>
         </h1>
       </div>
@@ -29,7 +29,7 @@ const NavBar = ({ isDarkMode }) => {
         {links.map(({ id, link, path }) => (
           <li
             key={id}
-            className="px-4 cursor-pointer font-mono hover:text-orange duration-200"
+            className="px-4 cursor-pointer font-mono font-bold hover:text-orange duration-200"
           >
             <Link
               to={path}
@@ -54,12 +54,12 @@ const NavBar = ({ isDarkMode }) => {
           {links.map(({ id, link, path }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer font-mono py-6 text-3xl hover:text-orange hover:scale-105 duration-200"
+              className="px-4 cursor-pointer font-mono font-bold py-6 text-3xl hover:text-orange hover:scale-105 duration-200"
             >
               <Link
                 onClick={() => setNav(!nav)}
                 to={path}
-                className="px-4 cursor-pointer font-mono py-6 text-3xl hover:scale-105 duration-200 hover:text-orange rounded-xl"
+                className="px-4 cursor-pointer font-mono font-bold py-6 text-3xl hover:scale-105 duration-200 hover:text-orange rounded-xl"
               >
                 {link}
               </Link>

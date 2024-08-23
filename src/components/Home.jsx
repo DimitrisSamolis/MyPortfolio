@@ -29,16 +29,16 @@ const Home = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl w-48 h-48">
               <img
                 src={MyImage}
-                alt="Dimitris"
+                alt="Dimitris Profile"
                 className="w-full h-full object-cover rounded-2xl"
               />
             </div>
           </div>
           <p className="text-lg my-8">
-            Hello! I'm Dimitris, a passionate and dedicated front-end developer.
-            I have completed my Bachelor's degree at the University of Piraeus,
-            where I honed my skills and expanded my knowledge in the field of
-            web development.
+            Hello! I am <b>Dimitris</b>, a passionate and dedicated
+            <b> front-end developer</b>. I have completed my Bachelor's degree
+            at the University of Piraeus, where I honed my skills and expanded
+            my knowledge in the field of web development.
           </p>
           <Link
             to="/about"

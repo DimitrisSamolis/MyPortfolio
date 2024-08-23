@@ -34,18 +34,19 @@ const About = () => {
             various aspects of software development.
           </p>
           <p className="text-lg mt-4">
-            I am particularly skilled in HTML, CSS, and JavaScript, and I am
-            always eager to learn new technologies and frameworks to enhance my
-            abilities. I have a strong attention to detail and a keen eye for
-            design, which enables me to create visually appealing and
-            user-friendly interfaces.
+            I am particularly skilled in <b>HTML, CSS, and JavaScript </b> , and
+            I am always eager to learn new technologies and frameworks to
+            enhance my abilities. I have a strong attention to <b>detail</b> and
+            a keen eye for <b>design</b>, which enables me to create visually
+            appealing and user-friendly interfaces.
           </p>
           <p className="text-lg mt-4">
             Collaboration is something I greatly value, and I thrive in team
             environments where ideas can be shared and synergies can be created.
             I believe that the best results are achieved through effective
-            communication, cooperation, and a passion for delivering
-            high-quality work.
+            <b> communication</b>, <b> cooperation</b>, and a passion for
+            delivering
+            <b> high-quality work</b> .
           </p>
           <p className="text-lg mt-4">
             I am currently seeking opportunities for cooperation and

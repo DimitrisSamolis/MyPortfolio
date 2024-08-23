@@ -87,7 +87,7 @@ const Contact = ({ isDarkMode }) => {
             ></textarea>
             <button
               type="submit"
-              className="bg-orange py-3 rounded-md shadow-md transition duration-300 ease-in-out transform hover:scale-105"
+              className="bg-orange py-3 rounded-md font-bold shadow-md transition duration-300 ease-in-out transform hover:scale-105"
             >
               Send Message
             </button>
