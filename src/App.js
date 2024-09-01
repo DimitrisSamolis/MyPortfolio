@@ -72,6 +72,7 @@ function App() {
                 path="/contact"
                 element={<Contact isDarkMode={isDarkMode} />}
               />
+              <Route path="*" element={<Home isDarkMode={isDarkMode} />} />
             </Routes>
           </div>
           <Socials isDarkMode={isDarkMode} />
