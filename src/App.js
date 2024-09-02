@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Socials from "./components/Socials";
@@ -51,7 +51,7 @@ function App() {
       {isLoading ? (
         <Loader />
       ) : (
-        <Router basename="/MyPortfolio">
+        <Router>
           <NavBar isDarkMode={isDarkMode} />
           <div className="flex-grow fade-in">
             <Routes>
