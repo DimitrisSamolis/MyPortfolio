@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 - Page Not Found</title>
-    <script type="text/javascript">
-      // Get the full URL of the current page
-      var pathname = window.location.pathname;
-
-      // Check if it's not the root (e.g., "/MyPortfolio/")
-      if (pathname !== "/MyPortfolio/") {
-        // Use history API to adjust the path and reload index.html
-        history.replaceState(null, null, "/MyPortfolio");
-        window.location.href = "/MyPortfolio";
-      }
-    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Page Not Found</title>
   </head>
   <body>
-    <h1>404 - Page Not Found</h1>
-    <p>Redirecting...</p>
+    <script type="text/javascript">
+      // Redirect to the index.html so the router can handle the route
+      window.location.replace("/MyPortfolio/");
+    </script>
   </body>
 </html>
