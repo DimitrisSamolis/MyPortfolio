@@ -11,10 +11,10 @@ const Contact = ({ isDarkMode }) => {
 
     emailjs
       .sendForm(
-        "service_06g0kl4",
+        "service_meitlgn",
         "template_oi3sngf",
         form.current,
-        "ENMdmqpl2f8jJnf9O"
+        "AXXsH9KutkNyw74kb"
       )
       .then(
         (result) => {
