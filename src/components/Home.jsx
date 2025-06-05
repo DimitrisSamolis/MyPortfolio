@@ -1,8 +1,20 @@
-import React from "react";
-import MyImage from "../assets/home/profile.png";
+import MyImage from "../assets/home/profile.webp";
 import { BsArrowRightCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
+
+const ProfileImage = ({ className }) => (
+  <div
+    className={`relative rounded-2xl overflow-hidden shadow-2xl ${className}`}
+  >
+    <img
+      src={MyImage}
+      alt="Dimitris, Front-End Developer Profile"
+      className="w-128 h-128 object-cover rounded-2xl"
+      fetchpriority="high"
+    />
+  </div>
+);
 
 const Home = () => {
   const { ref, inView } = useInView({
@@ -26,13 +38,7 @@ const Home = () => {
             Welcome to my Portfolio!
           </h1>
           <div className="relative md:hidden my-6 flex justify-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl w-48 h-48">
-              <img
-                src={MyImage}
-                alt="Dimitris Profile"
-                className="w-full h-full object-cover rounded-2xl"
-              />
-            </div>
+            <ProfileImage></ProfileImage>
           </div>
           <p className="text-lg my-8">
             Hello! I am <b>Dimitris</b>, a passionate and dedicated
@@ -42,20 +48,14 @@ const Home = () => {
           </p>
           <Link
             to="/about"
-            className="inline-flex items-center my-8 space-x-3 text-lg bg-orange font-medium py-3 px-6 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="inline-flex text-black items-center my-8 space-x-3 text-lg bg-orange font-medium py-3 px-6 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <span>More about me</span>
             <BsArrowRightCircle size={24} />
           </Link>
         </div>
         <div className="relative hidden md:block p-4 mt-10 md:mt-0 flex justify-center">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl w-128 h-128">
-            <img
-              src={MyImage}
-              alt="Dimitris"
-              className="w-full h-full object-cover rounded-2xl"
-            />
-          </div>
+          <ProfileImage></ProfileImage>
         </div>
       </div>
     </div>

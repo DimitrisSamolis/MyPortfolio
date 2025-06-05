@@ -61,7 +61,7 @@ const About = () => {
           </p>
           <Link
             to="/experience"
-            className="inline-flex items-center space-x-3 text-lg bg-orange font-medium my-8 py-3 px-6 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="inline-flex text-black items-center space-x-3 text-lg bg-orange font-medium my-8 py-3 px-6 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <span>Technologies that I have worked with</span>
             <BsArrowRightCircle size={24} />

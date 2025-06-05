@@ -82,7 +82,7 @@ const Projects = () => {
             various technologies and frameworks. Dive into each project to see
             how I implement solutions.
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 my-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 my-6 text-black">
             {projects.map(({ id, langs, title, src, href }) => (
               <a href={href} target="_blank" rel="noopener noreferrer" key={id}>
                 <div className="shadow-lg shadow-cyan hover:scale-105 duration-500 rounded-2xl relative hover:skew-y-2">
