@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Open Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .shadow-orange {
+    box-shadow: 0px 10px 20px rgb(255, 128, 0);
+  }
+
+  .shadow-blue {
+    box-shadow: 0px 10px 20px rgb(0, 42, 255);
+  }
+
+  .shadow-yellow {
+    box-shadow: 0px 10px 20px rgb(255, 255, 0);
+  }
+
+  .shadow-sky {
+    box-shadow: 0px 10px 20px rgb(0, 242, 255);
+  }
+
+  .shadow-green {
+    box-shadow: 0px 10px 20px rgb(0, 255, 55);
+  }
+
+  .shadow-red {
+    box-shadow: 0px 10px 20px rgb(255, 0, 0);
+  }
+
+  .shadow-pink {
+    box-shadow: 0px 10px 20px rgb(255, 0, 230);
+  }
+
+  .shadow-gray {
+    box-shadow: 0px 10px 20px rgb(44, 44, 44);
+  }
+
+  .shadow-purple {
+    box-shadow: 0px 10px 20px rgb(106, 0, 255);
+  }
+
+  .slide-in {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.5s ease-out;
+  }
+
+  .slide-in.active {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scale effect for buttons */
+.group:hover {
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.05);
+  }
+}
