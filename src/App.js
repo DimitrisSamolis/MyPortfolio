@@ -48,7 +48,6 @@ function App() {
       }}
       className="flex flex-col min-h-screen transition-all duration-500 ease-in-out"
     >
-      (
       <Router>
         <NavBar isDarkMode={isDarkMode} />
         <div className="flex-grow fade-in">
@@ -74,7 +73,6 @@ function App() {
         <Footer isDarkMode={isDarkMode} />
         <SwitchMode isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
       </Router>
-      )
     </div>
   );
 }
