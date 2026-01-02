@@ -4,8 +4,8 @@ import img2 from "../assets/projects/img2.jpg";
 import img3 from "../assets/projects/img3.png";
 import img4 from "../assets/projects/img4.jpg";
 import img5 from "../assets/projects/img5.png";
-import img6 from "../assets/projects/img6.jpg";
-import { FaGithub } from "react-icons/fa";
+import img6 from "../assets/projects/img6.png";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 
 const Projects = () => {
@@ -14,7 +14,7 @@ const Projects = () => {
       id: 1,
       src: img1,
       href: "https://github.com/DimitrisSamolis/MyPortfolio",
-      langs: "> ReactJS, TailwindCss",
+      langs: "> React, TailwindCss",
       title: "Portfolio",
     },
     {
@@ -28,7 +28,7 @@ const Projects = () => {
       id: 3,
       src: img3,
       href: "https://github.com/DimitrisSamolis/VideoGames-Angular",
-      langs: "> AngularJS, TypeScript",
+      langs: "> Angular, TypeScript",
       title: "VideoGames App",
     },
     {
@@ -42,15 +42,16 @@ const Projects = () => {
       id: 5,
       src: img5,
       href: "https://github.com/DimitrisSamolis/Website-Vue",
-      langs: "> VueJS",
+      langs: "> Vue",
       title: "Information System App",
     },
     {
       id: 6,
       src: img6,
-      href: "https://github.com/DimitrisSamolis/Client-Server",
-      langs: "> Python, XML",
-      title: "Communication Between Server-Client",
+      href: "https://github.com/DimitrisSamolis/invitation-webapp",
+      liveUrl: "https://invitation-webapp.netlify.app",
+      langs: "> Angular, NodeJS",
+      title: "Create custom invitations for your events",
     },
   ];
 
@@ -67,7 +68,7 @@ const Projects = () => {
         }`}
       >
         <div
-          className={`rounded-2xl p-8 shadow-lg p-6 slide-in ${
+          className={`rounded-2xl shadow-lg p-6 slide-in ${
             inView ? "active" : ""
           }`}
         >
@@ -83,28 +84,44 @@ const Projects = () => {
             how I implement solutions.
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-10 my-6 text-black">
-            {projects.map(({ id, langs, title, src, href }) => (
-              <a href={href} target="_blank" rel="noopener noreferrer" key={id}>
-                <div className="shadow-lg shadow-cyan hover:scale-105 duration-500 rounded-2xl relative hover:skew-y-2">
-                  <img src={src} alt="" className="rounded-t-2xl " />
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-90 transition-opacity">
-                    <div className="bg-white border hover:animate-pulse border-orange w-full h-full flex flex-col items-center justify-center rounded-2xl">
-                      <button className="sm:text-sm font-semibold text-lg py-4 text-center text-black">
+            {projects.map(({ id, langs, title, src, href, liveUrl }) => (
+              <div key={id} className="shadow-lg shadow-cyan hover:scale-105 duration-500 rounded-2xl relative hover:skew-y-2">
+                <img src={src} alt="" className="rounded-t-2xl " />
+                <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center opacity-0 hover:opacity-90 transition-opacity">
+                  <div className="bg-white border hover:animate-pulse border-orange w-full h-full flex flex-row items-center justify-center rounded-2xl">
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`sm:text-sm font-semibold text-lg py-4 text-center text-black hover:text-orange transition-colors ${liveUrl ? 'border-r border-orange pr-4' : ''}`}
+                    >
+                      <div className="flex items-center justify-center">
+                        <FaGithub size={liveUrl ? 50 : 60} />
+                      </div>
+                      Show code
+                    </a>
+                    {liveUrl && (
+                      <a
+                        href={liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="sm:text-sm font-semibold text-lg py-4 text-center text-black hover:text-cyan transition-colors pl-4"
+                      >
                         <div className="flex items-center justify-center">
-                          <FaGithub size={60} />
+                          <FaExternalLinkAlt size={50} />
                         </div>
-                        Show code
-                      </button>
-                    </div>
-                  </div>
-                  <div className="bg-orange rounded-b-2xl h-24">
-                    <h3 className="font-mono pb-0 p-1">{langs}</h3>
-                    <h3 className="flex items-center justify-center font-bold text-center py-2">
-                      {title}
-                    </h3>
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </div>
-              </a>
+                <div className="bg-orange rounded-b-2xl h-24">
+                  <h3 className="font-mono pb-0 p-1">{langs}</h3>
+                  <h3 className="flex items-center justify-center font-bold text-center py-2">
+                    {title}
+                  </h3>
+                </div>
+              </div>
             ))}
           </div>
         </div>

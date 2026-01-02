@@ -7,16 +7,19 @@ const Footer = ({ isDarkMode }) => {
     {
       id: 1,
       child: <FaLinkedin size={20} />,
+      title: "LinkedIn",
       href: "https://www.linkedin.com/in/dimitris-samolis-66a73b208/",
     },
     {
       id: 2,
       child: <FaGithub size={20} />,
+      title: "GitHub",
       href: "https://github.com/DimitrisSamolis",
     },
     {
       id: 3,
       child: <HiOutlineMail size={20} />,
+      title: "Email",
       href: "mailto:dimitrissamolis2001@gmai.com",
     },
   ];
@@ -30,8 +33,8 @@ const Footer = ({ isDarkMode }) => {
       <div className="mx-auto text-center">
         <div className="flex justify-center items-center">
           Find me on:
-          {links.map(({ id, child, href }) => (
-            <div key={id} className="mx-2 hover:text-orange">
+          {links.map(({ id, child, href, title }) => (
+            <div key={id}  className="mx-2 hover:text-orange" title={title}>
               <a href={href} className=" px-2" target="_blank" rel="noreferrer">
                 {child}
               </a>

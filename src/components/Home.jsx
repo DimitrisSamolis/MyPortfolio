@@ -12,6 +12,9 @@ const ProfileImage = ({ className }) => (
       alt="Dimitris, Front-End Developer Profile"
       className="w-128 h-128 object-cover rounded-2xl"
       fetchpriority="high"
+      width="475"
+      height="457"
+      decoding="async"
     />
   </div>
 );
@@ -54,7 +57,7 @@ const Home = () => {
             <BsArrowRightCircle size={24} />
           </Link>
         </div>
-        <div className="relative hidden md:block p-4 mt-10 md:mt-0 flex justify-center">
+        <div className="relative md:block p-4 mt-10 md:mt-0 flex justify-center">
           <ProfileImage></ProfileImage>
         </div>
       </div>

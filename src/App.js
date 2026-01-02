@@ -50,7 +50,7 @@ function App() {
     >
       <Router>
         <NavBar isDarkMode={isDarkMode} />
-        <div className="flex-grow fade-in">
+        <main className="flex-grow fade-in">
           <Routes>
             <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
             <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
@@ -68,7 +68,7 @@ function App() {
             />
             <Route path="*" element={<Home isDarkMode={isDarkMode} />} />
           </Routes>
-        </div>
+        </main>
         <Socials isDarkMode={isDarkMode} />
         <Footer isDarkMode={isDarkMode} />
         <SwitchMode isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />

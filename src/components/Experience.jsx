@@ -46,7 +46,7 @@ const Experience = () => {
         }`}
       >
         <div
-          className={`rounded-2xl p-8 shadow-lg p-6  slide-in ${
+          className={`rounded-2xl shadow-lg p-6  slide-in ${
             inView ? "active" : ""
           }`}
         >
